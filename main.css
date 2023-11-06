@@ -45,6 +45,16 @@ h2.dark {
   font-weight: 600;
 }
 
+h3, h4 {
+  color: var(--light-text);
+  font-weight: 500;
+}
+
+h3.dark, h4.dark {
+  color: var(--dark-text);
+  font-weight: 500;
+}
+
 p {
   color: var(--light-tertiary-text);
 }
