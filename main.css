@@ -70,6 +70,7 @@ p.dark {
 
 .header {
   background: var(--dark-bg);
+  margin-bottom: 20px;
   padding: 4px;
   & h1 {
     color: var(--dark-secondary-text);
@@ -81,6 +82,7 @@ p.dark {
 
 .header.dark {
   background: var(--light-bg);
+  margin-bottom: 20px;
   padding: 4px;
   & h1 {
     color: var(--light-secondary-text);
@@ -104,12 +106,26 @@ p.dark {
   display: flex;
   flex-flow: column;
   gap: 20px;
-  padding-left: 8px;
-  padding-right: 8px;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
 #toggler {
-  padding: 4px;
+  padding: 8px;
   text-decoration: none;
+  background: var(--light-bg);
+  color: var(--light-text);
+  border-radius: 0px;
+  border: 0;
+  /* appearance: none; */
+}
+
+#toggler.dark {
+  padding: 8px;
+  text-decoration: none;
+  background: var(--dark-bg);
+  color: var(--dark-text);
+  border-radius: 0px;
+  border: 0;
   /* appearance: none; */
 }

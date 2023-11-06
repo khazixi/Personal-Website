@@ -39,6 +39,8 @@ function toggle_dark() {
 
   document.querySelector('body')
     .classList.toggle('dark')
+
+  document.getElementById('toggler').classList.toggle('dark')
 }
 
 const btn = document.getElementById('toggler')
