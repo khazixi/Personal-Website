@@ -1,0 +1,49 @@
+:root {
+  --light-bg: hsl(0, 0%, 95%);
+  --light-secondary-bg: hsl(0, 0%, 90%);
+  --light-text: hsl(0, 0%, 5%);
+  --light-secondary-text: hsl(0, 0%, 10%);
+  --light-tertiary-text: hsl(0, 0%, 25%);
+
+  --dark-bg: hsl(0, 0%, 13%);
+  --dark-secondary-bg: hsl(0, 0%, 15%);
+  --dark-text: hsl(0, 0%, 95%);
+  --dark-secondary-text: hsl(0, 0%, 90%);
+  --dark-tertiary-text: hsl(0, 0%, 78%);
+  all: unset;
+}
+
+body {
+  background: var(--dark-bg);
+  color: var(--dark-text);
+}
+
+h1 {
+  color: var(--dark-text);
+  font-weight: 800;
+}
+
+h2 {
+  color: var(--dark-text);
+  font-weight: 600;
+}
+
+p {
+  color: var(--dark-tertiary-text);
+}
+
+.header {
+  background: var(--light-bg);
+  padding: 4px;
+  & h1 {
+    color: var(--light-secondary-text);
+  }
+  & p {
+    color: var(--light-tertiary-text);
+  }
+}
+
+.article {
+  background: var(--dark-secondary-bg);
+  padding: 4px;
+}
