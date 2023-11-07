@@ -10,7 +10,10 @@
   --dark-text: hsl(0, 0%, 95%);
   --dark-secondary-text: hsl(0, 0%, 90%);
   --dark-tertiary-text: hsl(0, 0%, 78%);
-  color-scheme: light dark;
+
+  --primary: hsl(45, 100%, 65%);
+
+  /* color-scheme: light dark; */
   all: unset;
   margin: 0px;
   padding: 0px;
@@ -69,19 +72,19 @@ p.dark {
 
 
 .header {
-  background: var(--dark-bg);
+  background: var(--primary);
   margin-bottom: 20px;
   padding: 4px;
   & h1 {
-    color: var(--dark-secondary-text);
+    color: var(--light-secondary-text);
   }
   & p {
-    color: var(--dark-tertiary-text);
+    color: var(--light-tertiary-text);
   }
 }
 
 .header.dark {
-  background: var(--light-bg);
+  background: var(--primary);
   margin-bottom: 20px;
   padding: 4px;
   & h1 {
@@ -94,12 +97,20 @@ p.dark {
 
 .article {
   background: var(--light-secondary-bg);
-  padding: 4px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 8px;
+  padding-right: 8px;
+  box-shadow: 2px 4px 2px var(--dark-tertiary-text);
 }
 
 .article.dark {
   background: var(--dark-secondary-bg);
-  padding: 4px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 8px;
+  padding-right: 8px;
+  box-shadow: 2px 4px 2px var(--light-tertiary-text);
 }
 
 .layout {
