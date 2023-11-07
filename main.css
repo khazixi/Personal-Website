@@ -96,21 +96,24 @@ p.dark {
 }
 
 .article {
-  background: var(--light-secondary-bg);
+  background: var(--light-bg);
   padding-top: 4px;
   padding-bottom: 4px;
   padding-left: 8px;
   padding-right: 8px;
   box-shadow: 2px 4px 2px var(--dark-tertiary-text);
+  border: 2px solid var(--light-secondary-bg);
+  /* border: 10px solid red; */
 }
 
 .article.dark {
-  background: var(--dark-secondary-bg);
+  background: var(--dark-bg);
   padding-top: 4px;
   padding-bottom: 4px;
   padding-left: 8px;
   padding-right: 8px;
   box-shadow: 2px 4px 2px var(--light-tertiary-text);
+  border: 2px solid var(--dark-secondary-bg);
 }
 
 .layout {
