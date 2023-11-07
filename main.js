@@ -1,12 +1,6 @@
 // INFO: Huge function, could maybe refactor?
 function toggle_dark() {
   document
-    .querySelectorAll('.header')
-    .forEach(
-      (el) => el.classList.toggle('dark')
-    )
-
-  document
     .querySelectorAll('.article')
     .forEach(
       (el) => el.classList.toggle('dark')

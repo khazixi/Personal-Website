@@ -83,18 +83,6 @@ p.dark {
   }
 }
 
-.header.dark {
-  background: var(--primary);
-  margin-bottom: 20px;
-  padding: 4px;
-  & h1 {
-    color: var(--light-secondary-text);
-  }
-  & p {
-    color: var(--light-tertiary-text);
-  }
-}
-
 .article {
   background: var(--light-bg);
   padding-top: 4px;
@@ -142,4 +130,12 @@ p.dark {
   border-radius: 0px;
   border: 0;
   /* appearance: none; */
+}
+
+footer {
+  background: var(--primary);
+  padding: 4px;
+  margin-bottom: 0;
+  margin-top: 20px;
+  color: var(--light-secondary-text);
 }
