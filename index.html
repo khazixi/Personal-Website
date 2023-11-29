@@ -5,41 +5,70 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta charset="utf-8">
+  <meta name="description" content="Jason Simmonds' Personal Website">
   <title> Jason's Personal Website </title>
   <link rel="stylesheet" href="main.css">
   <meta name="theme-color" content="hsl(45, 100%, 65%)" media="(prefers-color-scheme: light)">
 </head>
 
 <body>
-  <nav>
-    <ul>
-      <li> <a href="index.html"> Home </a> </li>
-      <li> <a href="projects.html"> Projects </a></li>
-    </ul>
-  </nav>
-  <header class="header">
-    <h1> Jason's Personal Web Page </h1>
-    <p> Personal Website for Jason Simmonds </p>
-
-    <button id="toggler"> Toggle Theme </button>
-  </header>
 
 
   <main class="layout">
-    <article>
+    <nav>
+      <button id="toggler">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+          <path fill="currentColor"
+            d="M12 22c5.523 0 10-4.477 10-10c0-.463-.694-.54-.933-.143a6.5 6.5 0 1 1-8.924-8.924C12.54 2.693 12.463 2 12 2C6.477 2 2 6.477 2 12s4.477 10 10 10Z" />
+        </svg>
+      </button>
+      <a href="index.html"> Home </a>
+      <a href="projects.html"> Projects </a>
+      <div class="nav-filler"></div>
+    </nav>
+
+    <header class="header">
+      <h1> Jason's Personal Web Page </h1>
+      <!-- <p> Personal Website for Jason Simmonds </p> -->
+
+    </header>
+    <article class="biking">
       <header>
         <h2> About Me! </h2>
       </header>
-      <p>
-        <span> Hello! </span> I am Jason Simmonds. I am an aspiring
-        software developer from Peabody, Massachusetts.
-      </p>
+      <section>
+        <p>
+          <span> Hello! </span> I am Jason Simmonds.
+          I am an aspiring software developer from Peabody,
+          Massachusetts.
+        </p>
 
-      <p>
-        I enjoy biking in the fall, and have biked various places
-        within the pioneer valley. I have biked as far north as
-        Greenfield, and as far South as Springfield.
-      </p>
+        <p>
+          I enjoy biking in the fall, and have biked various places
+          within the pioneer valley. I have biked as far north as
+          Greenfield, and as far South as Springfield. Springfield
+          is the farthest south that I have biked
+        </p>
+
+        <p>
+          I have also biked through every town in Essex County
+          and Massachusetts, and then some, with the farthest
+          north I've biked being Seabrook, New Hampsire
+        </p>
+      </section>
+
+      <figure>
+        <img src="assets/Ma_towns_biked.svg" alt="towns">
+        <figcaption>
+          Red = Biked Fall 2023
+        </figcaption>
+        <figcaption>
+          Green = Summer 2023
+        </figcaption>
+        <figcaption>
+          Yellow = Spring 2023
+        </figcaption>
+      </figure>
     </article>
   </main>
   <div class="filler"></div>
@@ -49,6 +78,7 @@
     <ul>
       <li><a href="https://www.linkedin.com/in/jason-simmonds-a72806263/">LinkedIn</a></li>
       <li><a href="https://github.com/khazixi">Github</a></li>
+      <li> Made with Vanilla HTML CSS and Javascript </li>
     </ul>
   </footer>
   <script src="main.js"></script>

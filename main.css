@@ -1,109 +1,102 @@
-@import url('https://fonts.googleapis.com/css?family=Inter');
+/* @import url('https://fonts.googleapis.com/css?family=Inter'); */
 
 :root {
-  --light-bg: hsl(0, 0%, 95%);
+  --light-bg: oklch(74.56% 0.141 76.76);
   --light-secondary-bg: hsl(0, 0%, 90%);
   --light-text: hsl(0, 0%, 5%);
   --light-secondary-text: hsl(0, 0%, 10%);
   --light-tertiary-text: hsl(0, 0%, 25%);
 
-  --dark-bg: hsl(0, 0%, 13%);
+  --dark-bg: oklch(22% 0.059 271.59);
   --dark-secondary-bg: hsl(0, 0%, 15%);
   --dark-text: hsl(0, 0%, 95%);
   --dark-secondary-text: hsl(0, 0%, 90%);
   --dark-tertiary-text: hsl(0, 0%, 78%);
 
-  --primary: oklch(75% 50% 105);
+  --primary: oklch(74.56% 0.249 135);
+  --secondary: oklch(86.62% 0.091 76.76);
+  --tertiary: oklch(80.44% 0.153 76.76);
 
   /* color-scheme: light dark; */
   all: unset;
   margin: 0px;
   padding: 0px;
-  font-family: 'Inter';
+  /* font-family: 'Inter'; */
 }
 
 body {
-  background: var(--light-bg);
   color: var(--light-text);
   margin: 0;
   padding: 0;
-}
 
-body.dark {
-  background: var(--dark-bg);
-  color: var(--dark-text);
+  &.dark {
+    background: var(--dark-bg);
+    color: var(--dark-text);
+  }
 }
 
 h1 {
   color: var(--light-text);
   font-weight: 900;
-}
+  font-size: 3rem;
+  text-align: center;
 
-h1.dark {
-  color: var(--dark-text);
-  font-weight: 900;
+  &.dark {
+    color: var(--dark-text);
+    font-weight: 900;
+  }
 }
 
 h2 {
   color: var(--light-text);
   font-weight: 700;
-}
 
-h2.dark {
-  color: var(--dark-text);
-  font-weight: 700;
+  &.dark {
+    color: var(--dark-text);
+    font-weight: 700;
+  }
 }
 
 h3, h4 {
   color: var(--light-text);
   font-weight: 600;
-}
 
-h3.dark, h4.dark {
-  color: var(--dark-text);
-  font-weight: 600;
+  &.dark {
+    color: var(--dark-text);
+    font-weight: 600;
+  }
 }
 
 p {
   color: var(--light-tertiary-text);
-}
 
-p.dark {
-  color: var(--dark-tertiary-text);
+  &.dark {
+    color: var(--dark-tertiary-text); 
+  }
 }
-
 
 .header {
   margin-bottom: 20px;
   padding: 8px;
-  & h1 {
-    color: var(--light-secondary-text);
-    text-align: center;
-  }
   & p {
     color: var(--light-tertiary-text);
   }
 }
 
 .article {
-  background: var(--light-bg);
+  /* background: var(--light-bg); */
   padding-top: 4px;
   padding-bottom: 4px;
   padding-left: 8px;
   padding-right: 8px;
-  box-shadow: 2px 4px 2px var(--dark-tertiary-text);
-  border: 2px solid var(--light-secondary-bg);
-  /* border: 10px solid red; */
-}
 
-.article.dark {
-  background: var(--dark-bg);
-  padding-top: 4px;
-  padding-bottom: 4px;
-  padding-left: 8px;
-  padding-right: 8px;
-  box-shadow: 2px 4px 2px var(--light-tertiary-text);
-  border: 2px solid var(--dark-secondary-bg);
+  &.dark {
+    /* background: var(--dark-bg); */
+    padding-top: 4px;
+    padding-bottom: 4px;
+    padding-left: 8px;
+    padding-right: 8px;
+  }
 }
 
 .layout {
@@ -114,27 +107,10 @@ p.dark {
   padding-right: 20px;
 }
 
-#toggler {
-  padding: 8px;
+button {
+  background: unset;
   text-decoration: none;
-  background: var(--light-bg);
-  color: var(--light-text);
-  border-radius: 0px;
-  border: 0;
-
-  &:hover {
-    background: red;
-  }
-
-  &.dark {
-    padding: 8px;
-    text-decoration: none;
-    background: var(--dark-bg);
-    color: var(--dark-text);
-    border-radius: 0px;
-    border: 0;
-  }
-
+  border: 0px;
 }
 
 .filler {
@@ -149,16 +125,74 @@ footer {
 }
 
 nav {
-  & ul {
-    list-style: none;
-    display: inline-flex;
-    gap: 1rem;
+  border: 2px solid black;
+  margin: 8px;
+  border-radius: 5px;
+  display: inline-flex;
+  align-self: center;
+  & :first-child {
+    padding: 8px;
+    border-radius: 20px 0 0 20px;
+  }
+
+  & :last-child {
+    border-radius: 0 20px 20px 0;
+  }
+
+  & a {
+    font-size: 1rem;
+    line-height: 1rem;
+    padding: 1rem;
+    vertical-align: bottom;
+  }
+
+  & .nav-filler {
+    flex-grow: 1;
+    padding: 1rem;
+  }
+
+  &.dark {
+    border: 2px solid white;
+    & svg {
+      color: white;
+    }
   }
 }
 
 a {
   color: red;
   &:visited {
-    color: var(--primary);
+    color: blue;
+  }
+}
+
+.biking {
+  display: grid;
+
+  grid-template-areas: 
+  "header header"
+  "section figure";
+
+  & > header {
+    grid-area: header;
+    text-align: center;
+  }
+
+  & > section {
+    grid-area: section;
+  }
+
+  & > figure {
+    grid-area: figure;
+    padding: 4px;
+    border: 1px solid black;
+
+    width: 80%;
+    height: calc(width);
+
+    > img {
+      width: inherit;
+      height: inherit;
+    }
   }
 }

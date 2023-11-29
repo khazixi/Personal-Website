@@ -34,6 +34,8 @@ function toggle_dark() {
   document.querySelector('body')
     .classList.toggle('dark')
 
+  document.querySelector('nav').classList.toggle('dark')
+
   document.getElementById('toggler').classList.toggle('dark')
 }
 
@@ -48,10 +50,21 @@ function toggleDarkURL() {
   window.history.pushState({}, "", url)
 }
 
+function darkStorage() {
+  const isDark = window.localStorage.getItem("dark")
+  if (isDark === "true") {
+    window.localStorage.setItem("dark", "false")
+  }
+  else {
+    window.localStorage.setItem("dark", "true")
+  }
+}
+
 btn.addEventListener(
   'click',
   () => {
     toggleDarkURL()
+    darkStorage()
     toggle_dark()
   }
 )
