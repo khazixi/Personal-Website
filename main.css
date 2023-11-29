@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Inter');
+
 :root {
   --light-bg: hsl(0, 0%, 95%);
   --light-secondary-bg: hsl(0, 0%, 90%);
@@ -11,14 +13,14 @@
   --dark-secondary-text: hsl(0, 0%, 90%);
   --dark-tertiary-text: hsl(0, 0%, 78%);
 
-  --primary: hsl(45, 100%, 65%);
+  --primary: oklch(75% 50% 105);
 
   /* color-scheme: light dark; */
   all: unset;
   margin: 0px;
   padding: 0px;
+  font-family: 'Inter';
 }
-
 
 body {
   background: var(--light-bg);
@@ -72,11 +74,11 @@ p.dark {
 
 
 .header {
-  background: var(--primary);
   margin-bottom: 20px;
-  padding: 4px;
+  padding: 8px;
   & h1 {
     color: var(--light-secondary-text);
+    text-align: center;
   }
   & p {
     color: var(--light-tertiary-text);
@@ -119,23 +121,44 @@ p.dark {
   color: var(--light-text);
   border-radius: 0px;
   border: 0;
-  /* appearance: none; */
+
+  &:hover {
+    background: red;
+  }
+
+  &.dark {
+    padding: 8px;
+    text-decoration: none;
+    background: var(--dark-bg);
+    color: var(--dark-text);
+    border-radius: 0px;
+    border: 0;
+  }
+
 }
 
-#toggler.dark {
-  padding: 8px;
-  text-decoration: none;
-  background: var(--dark-bg);
-  color: var(--dark-text);
-  border-radius: 0px;
-  border: 0;
-  /* appearance: none; */
+.filler {
+  height: 50dvh;
 }
 
 footer {
-  background: var(--primary);
   padding: 4px;
   margin-bottom: 0;
   margin-top: 20px;
   color: var(--light-secondary-text);
+}
+
+nav {
+  & ul {
+    list-style: none;
+    display: inline-flex;
+    gap: 1rem;
+  }
+}
+
+a {
+  color: red;
+  &:visited {
+    color: var(--primary);
+  }
 }

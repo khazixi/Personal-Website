@@ -11,6 +11,12 @@
 </head>
 
 <body>
+  <nav>
+    <ul>
+      <li> <a href="index.html"> Home </a> </li>
+      <li> <a href="projects.html"> Projects </a></li>
+    </ul>
+  </nav>
   <header class="header">
     <h1> Jason's Personal Web Page </h1>
     <p> Personal Website for Jason Simmonds </p>
@@ -18,8 +24,9 @@
     <button id="toggler"> Toggle Theme </button>
   </header>
 
+
   <main class="layout">
-    <article class="article">
+    <article>
       <header>
         <h2> About Me! </h2>
       </header>
@@ -34,125 +41,11 @@
         Greenfield, and as far South as Springfield.
       </p>
     </article>
-
-    <article class="article">
-      <header>
-        <h2> Projects </h2>
-      </header>
-      <section>
-        <h3> Monopoly Datasite</h3>
-        <h4> Motivation </h4>
-        <p>
-          One of the things I always hated was never finishing a Monopoly Game,
-          and I never really found a good website for storing these games so I
-          decided to make my own.
-        </p>
-        <h4> Technology Journey </h4>
-        <p>
-          I always wanted to try out a fullstack project. I came in with the belief
-          that it would not be that hard because there are tons of people out there
-          that try to make the job easy for you. As I result, I jumped into the project
-          with PEVN Stack (Postgres, Express, Vue, Node). I wanted the project to be simple
-          where I would have data defined in postgres and it would allow you to visualize
-          all the spots. Once I completed the task I thought that this was unambitious
-          and thought I could utilize more aspects of fullstack beyond simple GET requests.
-          So, I decided to add the storage UI for storing the states, authentication, and a
-          profiles page to view your games. Somewhere along the road when I was updating I ran
-          into issues between Vite and Express. Feeling that this was a sign that this was the
-          wrong approach I decided to embrace Nuxt. So over time I rewrote the project to use Nuxt.
-          I eventually was able to implement all of the features with everything working locally,
-          so I go to deploy this project to Vercel. I notice that my deployment is failing, due to
-          Prisma, so I used this as a chance to try something new. While Prisma is a fine ORM,
-          the additional latency that the ORM's architecture adds to queries was not something that
-          I liked. Additionally, I didn't like how abstracted Prisma felt from SQL. Then I tried
-          Drizzle ORM. it was a pain getting all the queries migrated to Prisma, and tearing out
-          all the queries I did in a day, but it was worth it. With Drizzle, I was able to
-          deploy my website and have other people visit it which is pretty nice.
-        </p>
-        <h4> Reflections </h4>
-        <p>
-          While I was very impatient with my willingness to stick to technologies, the real value
-          I got out of this project is beginning to figure out what technologies I like to use.
-          For instance, I don't like express. While I did not run into any of the scalability issues
-          that express has, I don't feel like it was the best framework to solve my problem.
-          Although nuxt and the utilities it provided (thank unJS) were nice, upon reflection,
-          leads me to feel like the overall concept of the website I had was over-engineered. I believe
-          the optimal way for me to make this website would have been a SPA (Single Page Application)
-          leveraging native browser APIs to solve the users needs.
-        </p>
-      </section>
-
-      <section>
-        <h3> Currency-X-Change </h3>
-        <h4> Motivation </h4>
-        <p>
-          I as a person like collaborating working with my friends, and this extends to coding.
-          I collaborated with my friend Emmanuel Kon, on this project. I wanted to try out next,
-          and my friend was learning React, so this seemed like a good project to try next on.
-        </p>
-        <h4> Technology Journey </h4>
-        <p>
-          Because Emmanuel did not have a lot of opinions on which technologies he liked while I did,
-          I decided to use NextJS for this project. The reason was, I could use next in combination with
-          Redis to limit API calls to external API that we were using for the project. Doing the project
-          was pretty smooth sailing as I was able to get some commits and he was able to get some in too.
-          I was relegated to the backend work, where I set up the Caching using Upstash
-          (Maybe I could have used Vercel's Caching?), and setting up the API Route that we would grab the
-          information from (we only had access to one useful API route). I left Emmanuel to dealing with the
-          frontend work because he was less experienced with it and I wanted him to learn a bit of frontend.
-          We had some bugs here and there, where I fixed some and he fixed some, the most recent one I fixed
-          which was a loading bug, which I lazily fixed by using Vercel's SWR. Sometimes Libraries are too sweet.
-        </p>
-        <h4> Reflections </h4>
-        <p>
-          I didn't really have a lot of React Experience, so it is very important to have
-          despite the triviality of the project. Moreover, using Redis for limiting API calls
-          was nice to because it caused me to learn a bit about the architecture of a website
-          and how to make it more performant.
-        </p>
-      </section>
-
-      <section>
-        <h3> Awakening Database </h3>
-        <h4> Motivation </h4>
-        <p>
-          Before doing this project, I had been doing a fair bit of research into SQLite for Web
-          Applications. While SQLite has clear limitations that the library's authors acknowledge,
-          My projects scale to 0 users which makes SQLite the ideal solution for most of my web apps.
-          However, this project serviced one of the other uses of SQLite, notably for creating a read
-          heavy or single writer apps.
-        </p>
-
-        <p>
-          I have talked a fair amount on the SQLite side, but what about this "Awakening"?
-          The Awakening I am talking about is Fire Emblem Awakening. While Serenes Forest is
-          a good source of Fire Emblem information, there isn't a way to programtically use this
-          information, hence my project, I scrape the data from their page and store it onto a
-          SQLite Database which allows the data to be used programatically.
-        </p>
-        <h4> Technology Journey </h4>
-        <p>
-          I don't like using external libraries in my projects, however, because I did need to
-          web scrape I used the Beautiful Soup, Requests combo. Initially I wanted to do a CLI,
-          but this did not make much sense for the application I was going for, so I decided to
-          use a TUI. I went with Pytermgui, but the reactivity solution wasn't obvious so I decided
-          not to use that. I ended up opening an http server and serving an HTML form and parsing the
-          input from this form to control what gets scraped. Python has a built in HTTP server so this
-          is enough for me.
-        </p>
-        <h4> Reflection </h4>
-        <p>
-          The HTTP Server Idea is definitely over engineered, and I do have more stuff that I could scrape off of the
-          website,
-          but for the limited domain I have its fine. I do like that with python I am able to
-          leverage the standard library for a minimal dependency project because it makes it easier to install.
-        </p>
-      </section>
-    </article>
-
   </main>
+  <div class="filler"></div>
+
   <footer>
-    <h5> Links! </h5>
+    <h3> Links! </h3>
     <ul>
       <li><a href="https://www.linkedin.com/in/jason-simmonds-a72806263/">LinkedIn</a></li>
       <li><a href="https://github.com/khazixi">Github</a></li>

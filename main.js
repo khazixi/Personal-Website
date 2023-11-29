@@ -39,7 +39,26 @@ function toggle_dark() {
 
 const btn = document.getElementById('toggler')
 
+function toggleDarkURL() {
+  const url = new URL(window.location)
+  const isDark = url.searchParams.get("dark")
+  if (isDark === null) url.searchParams.append("dark", "true")
+  else if (isDark === "true") url.searchParams.set("dark", "false")
+  else url.searchParams.set("dark", "true")
+  window.history.pushState({}, "", url)
+}
+
 btn.addEventListener(
   'click',
-  () => toggle_dark()
+  () => {
+    toggleDarkURL()
+    toggle_dark()
+  }
+)
+
+window.addEventListener(
+  'popstate',
+  (e) => {
+    toggle_dark()
+  }
 )
