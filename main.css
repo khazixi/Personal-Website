@@ -132,11 +132,9 @@ header {
 nav {
   /* border: 2px solid black; */
   /* margin: 8px; */
-  border-radius: 5px;
-  display: inline-flex;
+  display: flex;
   padding: 8px;
   /* align-self: center; */
-  width: 100vw;
   /* & :first-child { */
   /*   padding: 8px; */
   /*   border-radius: 20px 0 0 20px; */
@@ -171,6 +169,11 @@ a {
   &:visited {
     color: black;
   }
+}
+
+.projects {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
 }
 
 .biking {
