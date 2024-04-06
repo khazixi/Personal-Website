@@ -1,82 +1,64 @@
 /* @import url('https://fonts.googleapis.com/css?family=Inter'); */
 
 :root {
-  --light-bg: oklch(74.56% 0.141 76.76);
-  --light-secondary-bg: hsl(0, 0%, 90%);
-  --light-text: hsl(0, 0%, 5%);
-  --light-secondary-text: hsl(0, 0%, 10%);
-  --light-tertiary-text: hsl(0, 0%, 25%);
-
-  --dark-bg: oklch(22% 0.059 271.59);
-  --dark-secondary-bg: hsl(0, 0%, 15%);
-  --dark-text: hsl(0, 0%, 95%);
-  --dark-secondary-text: hsl(0, 0%, 90%);
-  --dark-tertiary-text: hsl(0, 0%, 78%);
-
-  --primary: oklch(74.56% 0.249 135);
-  --secondary: oklch(86.62% 0.091 76.76);
-  --tertiary: oklch(80.44% 0.153 76.76);
-
-  /* color-scheme: light dark; */
   all: unset;
   margin: 0px;
   padding: 0px;
-  /* font-family: 'Inter'; */
-}
+  font-family: 'Inter';
 
-body {
-  color: var(--light-text);
-  margin: 0;
-  padding: 0;
+  --tertiary: oklch(74.56% 0.249 135);
+  --primary: oklch(86.62% 0.091 76.76);
+  --secondary: oklch(80.44% 0.153 76.76);
 
-  &.dark {
-    background: var(--dark-bg);
-    color: var(--dark-text);
+  &:has(input[type="checkbox"]:not(:checked)) {
+    --text: hsl(0, 0%, 5%);
+    --text2: hsl(0, 0%, 10%);
+    --text3: hsl(0, 0%, 25%);
+    --bg: oklch(74.56% 0.141 76.76);
+  }
+
+  &:has(input[type="checkbox"]:checked) {
+    --text: hsl(0 0 95%);
+    --text2: hsl(0, 0%, 90%);
+    --text3: hsl(0, 0%, 78%);
+    --bg: oklch(22% 0.059 271.59);
   }
 }
 
-h1 {
-  color: var(--light-text);
-  font-weight: 900;
-  font-size: 3rem;
-  text-align: center;
 
-  &.dark {
-    color: var(--dark-text);
-    font-weight: 900;
+@layer test {
+  body {
+    margin: 0;
+    padding: 0;
+    background: var(--bg);
   }
-}
 
-h2 {
-  color: var(--light-text);
-  font-weight: 700;
+  :is(p, h1, h2, h3, h4, h5, h6) {
+    color: var(--text);
+  }
 
-  &.dark {
-    color: var(--dark-text);
+  h2 {
     font-weight: 700;
   }
-}
 
-h3, h4 {
-  color: var(--light-text);
-  font-weight: 600;
-
-  &.dark {
-    color: var(--dark-text);
+  :is(h3, h4) {
     font-weight: 600;
   }
-}
 
-p {
-  color: var(--light-tertiary-text);
+  :is(h5, h6) {
+    font-weight: 500;
+  }
 
-  &.dark {
-    color: var(--dark-tertiary-text); 
+  h1 {
+    font-weight: 900;
+    font-size: 3rem;
+    text-align: center;
   }
 }
 
+
 header {
-  background: oklch(70% 0.1658 261.72 / 50%);
+  background: var(--primary);
   border-bottom: 0;
   padding: 2rem;
 
@@ -89,18 +71,11 @@ h2 {
 
 .article {
   /* background: var(--light-bg); */
+  background: var(--bg);
   padding-top: 4px;
   padding-bottom: 4px;
   padding-left: 8px;
   padding-right: 8px;
-
-  &.dark {
-    /* background: var(--dark-bg); */
-    padding-top: 4px;
-    padding-bottom: 4px;
-    padding-left: 8px;
-    padding-right: 8px;
-  }
 }
 
 .layout {
@@ -125,10 +100,10 @@ footer {
   padding: 4px;
   margin-bottom: 0;
   margin-top: 20px;
-  color: var(--light-secondary-text);
+  color: var(--text);
 }
 
-nav {
+.navbar {
   display: flex;
   padding: 8px;
 
@@ -144,15 +119,15 @@ nav {
     padding: 1rem;
   }
 
-  &.dark {
-    & svg {
-      color: white;
-    }
+  & svg {
+    display: inline;
+    color: white;
   }
 }
 
 a {
   color: black;
+
   &:visited {
     color: black;
   }
@@ -163,35 +138,4 @@ a {
   grid-template-columns: 1fr 1fr 1fr;
   margin-left: auto;
   margin-right: auto;
-}
-
-.biking {
-  display: grid;
-
-  grid-template-areas: 
-  "header header"
-  "section figure";
-
-  & > header {
-    grid-area: header;
-    text-align: center;
-  }
-
-  & > section {
-    grid-area: section;
-  }
-
-  & > figure {
-    grid-area: figure;
-    padding: 4px;
-    border: 1px solid black;
-
-    width: 80%;
-    height: calc(width);
-
-    > img {
-      width: inherit;
-      height: inherit;
-    }
-  }
 }
