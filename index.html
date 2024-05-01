@@ -7,19 +7,21 @@
   <meta charset="utf-8">
   <meta name="description" content="Jason Simmonds' Personal Website">
   <title> Jason's Personal Website </title>
+  <link rel="preconnect" href="https://rsms.me/">
+  <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
   <link rel="stylesheet" href="main.css">
-  <link rel="stylesheet" href="animation.css">
+  <!-- <link rel="stylesheet" href="animation.css"> -->
+
   <!-- <meta name="theme-color" content="hsl(45, 100%, 65%)" media="(prefers-color-scheme: light)"> -->
 </head>
 
 <body>
-  <header>
+  <header class="home__header">
     <nav class="navbar">
       <!-- <button id="toggler"> -->
       <!--   <img src="assets/moon.svg"> -->
       <!-- </button> -->
 
-      <input type="checkbox" name="dark">
       <a href="index.html">
         <!-- <svg><use xlink:href="assets/home.svg"></use></svg> -->
         <img src="assets/home.svg">
@@ -42,11 +44,28 @@
     <!-- <p> Personal Website for Jason Simmonds </p> -->
 
   </header>
-  <main class="layout">
-    <h2> Projects</h2>
-    <article class="projects">
+  <main class="home__layout">
+    <article class="about">
+      <h2> About Me </h2>
+      <p>
+        My name is Jason, I am an aspiring software developer from Peabody, Massachusetts. 
+        I am currently an Informatics and Statistics Double Major at the University of 
+        Massachusetts Amherst. My current interest is in emerging web technologies like
+        Solid.js and Svelte, and Development Infrastructure: such as Cloudflare Workers, and Linux.
+      </p>
+
+      <h3> Experience </h3>
+      <p>
+        I am currently a Software Engineer at my school's Software Engineering Club, Build UMass. 
+        I worked hastily to ship our client's application using technologies such as Vue.JS and
+        Firebase.
+      </p>
+    </article>
+
+    <article class="project">
+      <h2> Projects</h2>
       <figure>
-        <img alt="Monopoly Datasite">
+        <h3> Monopoly Datasite </h3>
         <figcaption>
           <h3> Technologies </h3>
           <p>
@@ -59,7 +78,7 @@
       </figure>
 
       <figure>
-        <img alt="Awakening DB Creator">
+        <h3>Awakening DB Creator</h3>
         <figcaption>
           <h3> Technologies </h3>
           <p>
@@ -70,7 +89,7 @@
       </figure>
 
       <figure>
-        <img alt="Local Connector">
+        <h3>Local Connector</h3>
         <figcaption>
           <h3> Technologies </h3>
           <p>
@@ -83,7 +102,7 @@
       </figure>
 
       <figure>
-        <img alt="Currency-X-Change">
+        <h3> Currency-X-Change </h3>
         <figcaption>
           <h3> Technologies </h3>
           <img src="assets/react.svg">
@@ -92,6 +111,19 @@
 
         </figcaption>
       </figure>
+    </article>
+
+    <article class="interest">
+      <h2> Current Interests </h2>
+      <ul class="interest__list">
+        <li> Solid.js and Solid Start </li>
+        <li> The light-dark() CSS Function </li>
+        <li> Svelte 5 </li>
+        <li> NGinx </li>
+        <li> Cloudflare Workers </li>
+        <li> Hosting </li>
+        <li> Docker </li>
+      </ul>
     </article>
 
 
