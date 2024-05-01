@@ -89,7 +89,7 @@ html {
     li { 
       padding: 1rem;
       &:hover {
-        background: color-mix(in lch, gray 40%, white)
+        background: color-mix(in lch, gray 40%, white);
       }
     }
   }
