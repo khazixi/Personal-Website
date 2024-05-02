@@ -41,7 +41,7 @@ h5 {
 
     .navbar {
       display: flex;
-      padding: 2rem 12rem;
+      padding: 2rem 12rem 0 12rem;
       gap: 1.5rem;
     }
 
