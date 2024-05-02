@@ -23,17 +23,37 @@ html {
   font-size: 100%;
 }
 
+h1 {
+  font-size: 2.25rem;
+}
+
+h2 {
+  font-size: 1.75rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+}
+
+h4 {
+  font-size: 1.25rem;
+}
+
+h5 {
+  font-size: 1rem;
+}
+
 .home__header {
   display: flex;
   flex-direction: column;
 
-  h1 {
+  :is(h1, p) {
     text-align: center;
   }
 
   .navbar {
     display: flex;
-    padding: 2rem 4rem;
+    padding: 2rem 12rem;
     gap: 1.5rem;
   }
 
@@ -48,7 +68,11 @@ html {
     "about about"
     "interest project";
   gap: 4rem;
-  padding: 4rem;
+  padding: 4rem 12rem;
+}
+
+.cycle__layout {
+  padding: 0 12rem;
 }
 
 .about {
