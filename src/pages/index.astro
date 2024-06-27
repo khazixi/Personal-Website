@@ -1,44 +1,32 @@
+---
+import Navbar from "../components/Navbar.astro";
+import Header from "../components/Header.astro";
+import Project from "../components/Project.astro";
+import Portfolio from "../components/Portfolio.astro";
+import '@fontsource/inter'
+---
+
 <html>
-  <head>
-    <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta charset="utf-8" />
-    <meta name="description" content="Jason Simmonds' Personal Website" />
-    <title>Jason's Personal Website</title>
-    <link rel="prefetch" href="cycling.html" />
-    <link rel="preconnect" href="https://rsms.me/" />
-    <link rel="stylesheet" href="https://rsms.me/inter/inter.css" />
-    <link rel="stylesheet" href="main.css" />
-  </head>
-
   <body>
-    <header class="home__header">
-      <nav class="navbar">
-        <!-- <button id="toggler"> -->
-        <!--   <img src="assets/moon.svg"> -->
-        <!-- </button> -->
+    <main class="flex items-center flex-col px-8">
+      <Header>
+        <Navbar />
+        <h1 class="text-5xl font-bold">Jason's Personal Web Page</h1>
+        <p class="text-lg text-gray-800">Home Page</p>
+      </Header>
 
-        <a href="index.html">
-          <!-- <svg><use xlink:href="assets/home.svg"></use></svg> -->
-          <img src="assets/home.svg" />
-        </a>
-        <a href="cycling.html">
-          <img src="assets/biking.svg" />
-        </a>
-        <div class="nav-filler"></div>
-        <a href="https://www.linkedin.com/in/jason-simmonds-a72806263/">
-          <img src="assets/linkedin.svg" />
-        </a>
-        <a href="https://github.com/khazixi">
-          <img src="assets/github.svg" />
-        </a>
-        <a href="">
-          <img src="assets/twitter.svg" />
-        </a>
-      </nav>
-      <h1>Jason's Personal Web Page</h1>
-      <p>Home Page</p>
-    </header>
+      <Portfolio>
+      <Project title="Local Connector" technologies={['devicon:nodejs', 'devicon:sqlite', 'devicon:solidjs', 'devicon:tailwindcss']}/>
+
+      <Project title="Undergraduate Law Review" technologies={['devicon:firebase', 'devicon:vuejs', 'devicon:tailwindcss']}/>
+
+      <Project title="Personal Website" technologies={['devicon:astro', 'devicon:tailwindcss']}/>
+
+      <Project title="Seatfinder" technologies={['devicon:javascript', 'devicon:css3', 'devicon:html5']}/>
+      </Portfolio>
+    </main>
+
+    <!--
     <main class="home__layout">
       <article class="about">
         <h2>About Me</h2>
@@ -128,8 +116,9 @@
         <ul>
           <li><a href="https://timo.sh"> Timo </a></li>
         </ul>
-        <p>Made with Vanilla, HTML, CSS and JS</p>
+        <p> Astro </p>
       </footer>
     </main>
+    -->
   </body>
 </html>

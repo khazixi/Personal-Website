@@ -9,10 +9,14 @@
   "dependencies": {
     "@astrojs/tailwind": "^5.1.0",
     "@astrojs/ts-plugin": "^1.8.0",
+    "@fontsource/inter": "^5.0.18",
     "astro": "^4.11.3",
+    "astro-icon": "^1.1.0",
+    "postcss": "^8.4.38",
     "tailwindcss": "^3.4.4"
   },
   "devDependencies": {
+    "@iconify-json/devicon": "^1.1.44",
     "@typescript-eslint/parser": "^7.14.1",
     "eslint": "^9.5.0",
     "eslint-plugin-astro": "^1.2.2",
