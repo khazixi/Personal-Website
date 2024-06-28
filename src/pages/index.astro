@@ -6,7 +6,21 @@ import "@fontsource/inter";
 ---
 
 <BaseLayout title="Jason's Peronsal Web Page" description="Home Page">
+  <article class="flex flex-col gap-4 max-w-[1120px]">
+    <h2 class="text-4xl font-bold text-gray-950 text-center">About Me</h2>
+
+    <p>
+      Hello, I am <b>Jason</b>. I am an aspiring Software Developer from Peabody, MA. I am
+      currently an <b>Applied Mathematics Student</b> at the <b>University of
+      Massachusetts Amherst</b>. As of recent I have come to love the state of
+      Massachusetts and its diverse landscape as a result of cycling. If you are
+      from the North Shore you may have seen my cycling through some of these
+      town. <b> My favorite town in Massachusetts is Gloucester. </b>
+    </p>
+  </article>
+
   <h2 class="text-3xl font-bold text-gray-950">Personal Projects</h2>
+
   <Portfolio>
     <Project
       title="Local Connector"
@@ -24,14 +38,14 @@ import "@fontsource/inter";
       </p>
     </Project>
 
-    <!-- <Project title="Undergraduate Law Review" technologies={['devicon:firebase', 'devicon:vuejs', 'devicon:tailwindcss']}/> -->
-
     <Project
       title="Personal Website"
       link="https://github.com/khazixi/Personal-Website"
       technologies={["devicon:astro", "devicon:tailwindcss"]}
     >
-      <p> My Personal Website made with whatever technology I fancy at the time. </p>
+      <p>
+        My Personal Website made with whatever technology I fancy at the time.
+      </p>
     </Project>
 
     <Project
@@ -39,23 +53,52 @@ import "@fontsource/inter";
       link="https://github.com/khazixi/Seatfinder"
       technologies={["devicon:javascript", "devicon:css3", "devicon:html5"]}
     >
-      <p> Simple site made to help people locate their friends in UMass Amherst's 4 dining halls. </p>
+      <p>
+        Simple site made to help people locate their friends in UMass Amherst's
+        4 dining halls.
+      </p>
     </Project>
 
-    <Project title="Echo Networking" technologies={["devicon:rust"]} link="https://github.com/khazixi/Echo-Server-Rust-" >
-      <p> An Echo server in client made using no dependencies in Rust </p>
+    <Project
+      title="Echo Networking"
+      technologies={["devicon:rust"]}
+      link="https://github.com/khazixi/Echo-Server-Rust-"
+    >
+      <p>An Echo server in client made using no dependencies in Rust</p>
     </Project>
 
-    <Project title="Currency-X-Change" technologies={['devicon:react', 'devicon:nextjs', 'devicon:redis']} link="https://github.com/k1mdev/currency-x-change">
-      <p> A simple currency conversion site made using Next.js and Redis </p>
+    <Project
+      title="Currency-X-Change"
+      technologies={["devicon:react", "devicon:nextjs", "devicon:redis"]}
+      link="https://github.com/k1mdev/currency-x-change"
+    >
+      <p>A simple currency conversion site made using Next.js and Redis</p>
     </Project>
 
-    <Project title="Awakening DB Creator" technologies={['devicon:go', 'devicon:sqlite']} link="https://github.com/khazixi/awakening-db">
-      <p> Simple CLI tool that creates a SQLite database of Fire Emblem Awakening Game Data</p>
+    <Project
+      title="Awakening DB Creator"
+      technologies={["devicon:go", "devicon:sqlite"]}
+      link="https://github.com/khazixi/awakening-db"
+    >
+      <p>
+        Simple CLI tool that creates a SQLite database of Fire Emblem Awakening
+        Game Data
+      </p>
     </Project>
 
-    <Project title="UMass Undergraduate Law Review" technologies={['devicon:firebase', 'devicon:vuejs', 'devicon:tailwindcss']}>
-    <p> Project made for the UMass Undergraduate Law Review Club, under Build Umass.</p>
+    <Project
+      title="UMass Undergraduate Law Review"
+      technologies={[
+        "devicon:firebase",
+        "devicon:vuejs",
+        "devicon:tailwindcss",
+      ]}
+      link="https://prelaw-b353d.web.app"
+    >
+      <p>
+        Project made for the UMass Undergraduate Law Review Club, under Build
+        Umass.
+      </p>
     </Project>
   </Portfolio>
 </BaseLayout>
