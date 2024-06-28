@@ -2,20 +2,24 @@
 interface Props {
   title: string;
   technologies: string[];
+  link: string;
 }
 
 import { Icon } from "astro-icon/components";
-const { technologies, title } = Astro.props;
+const { technologies, title, link } = Astro.props;
 ---
 
-<div class="w-56 h-60 border border-black rounded-xl">
-  <h4 class="text-2xl font-bold">{title}</h4>
-  <div>
-    <h5 class="text-gray-900 text-lg font-semibold">Technologies</h5>
+<div class="w-64 h-64 border border-black rounded-xl flex flex-col items-center p-4">
+  <a href={link} target="_blank" class="text-lg font-bold text-center hover:underline">{title}</a>
+
+  <div class="flex-grow"> </div>
+  <slot />
+  <div class="flex-grow"> </div>
+
+  <div class="border-t border-black w-full">
+    <h5 class="text-gray-900 text-md font-semibold">Technologies</h5>
     <div class="inline-flex gap-4">
       {technologies.map((tech) => <Icon width={28} height={28} name={tech} />)}
     </div>
   </div>
-
-  <slot />
 </div>
