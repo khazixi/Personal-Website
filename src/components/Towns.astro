@@ -1,0 +1,120 @@
+---
+// import { Fragment } from "astro/jsx-runtime"
+import towns from "../assets/MATOWN.svg?raw";
+---
+
+<Fragment set:html={towns} />
+
+<script>
+  // TODO: Add Vermont, Connecticut, New Hampshire maps for:
+  // Vernon and Brattleboro, Enfield, and Seabrook
+
+  function createIsSelector(strings: string[]) {
+    return `:is(${strings.join(",")})`;
+  }
+
+  const svg = document.querySelector("svg");
+
+  function applyColors(element: SVGSVGElement, towns: string[], color: string) {
+    element
+      .querySelectorAll(createIsSelector(towns))
+      .forEach((town) => town.setAttribute("style", `fill: ${color}`));
+  }
+
+  const AmherstFall = [
+    "#Amherst",
+    "#Hadley",
+    "#Northhampton",
+    "#Easthampton",
+    "#Holyoke",
+    "#Sunderland",
+    "#Leverett",
+    "#Montague",
+  ];
+
+  const AmherstFall2 = [
+    "#Granby",
+    "#Deerfield",
+    "#Greenfield",
+    "#South_Hadley",
+    "#Chicopee",
+    "#Springfield",
+  ];
+
+  const AmherstSpring2 = [
+    "#Northfield",
+    "#Gill",
+    "#Bernardston",
+    "#Erving",
+    "#Shutesbury",
+    "#Hatfield",
+    "#Whately",
+    "#Pelham",
+    "#Westhampton",
+    "#Southhampton",
+    "#Belchertown",
+    "#West_Springfield",
+    "#Westfield",
+    "#Agawam",
+    "#Longmeadow",
+    "#Ludlow",
+  ];
+
+  const Summer1 = [
+    "#Salisbury",
+    "#Amesbury",
+    "#Merrimac",
+    "#Haverhill",
+    "#Methuen",
+    "#Andover",
+    "#Lawrence",
+    "#North_Andover",
+    "#Boxford",
+    "#Georgetown",
+    "#Groveland",
+    "#West_Newbury",
+    "#Newburyport",
+    "#Newbury",
+    "#Rowley",
+    "#Ipswich",
+    "#Essex",
+    "#Gloucester",
+    "#Rockport",
+    "#Manchester_by-the-Sea",
+    "#Hamilton",
+    "#Wenham",
+    "#Beverly",
+    "#Salem",
+    "#Peabody",
+    "#Danvers",
+    "#Saugus",
+    "#Middleton",
+    "#Topsfield",
+    "#Lynnfield",
+    "#Lynn",
+    "#Nahant",
+    "#Swampscott",
+    "#Marblehead",
+    "#North_Reading",
+    "#Reading",
+    "#Wakefield",
+    "#Melrose",
+    "#Malden",
+    "#Malden",
+    "#Everett",
+    "#Medford",
+    "#Sommerville",
+    "#Camebridge",
+    "#Boston",
+    "#Chelsea",
+    "#Revere",
+  ];
+
+  const Summer2 = ["#Cambridge", "#Somerville", "#Stoneham", "#Winchester"];
+
+  applyColors(svg, AmherstFall, 'indianred')
+  applyColors(svg, AmherstFall2, 'lemonchiffon')
+  applyColors(svg, AmherstSpring2, 'skyblue')
+  applyColors(svg, Summer1, 'khaki')
+  applyColors(svg, Summer2, 'brown')
+</script>
