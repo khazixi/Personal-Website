@@ -9,8 +9,9 @@ import towns from "../assets/MATOWN.svg?raw";
   // TODO: Add Vermont, Connecticut, New Hampshire maps for:
   // Vernon and Brattleboro, Enfield, and Seabrook
 
-  function createIsSelector(strings: string[]) {
-    return `:is(${strings.join(",")})`;
+  function createIsSelector(ids: string[]) {
+    // NOTE: :is() is a forgiving selector so missing one ID does not screw with the whole list
+    return `:is(${ids.join(",")})`;
   }
 
   const svg = document.querySelector("svg");
@@ -24,7 +25,7 @@ import towns from "../assets/MATOWN.svg?raw";
       });
   }
 
-  const AmherstFall = [
+  const AmherstFall1 = [
     "#Amherst",
     "#Hadley",
     "#Northhampton",
@@ -115,7 +116,7 @@ import towns from "../assets/MATOWN.svg?raw";
 
   const Summer2 = ["#Cambridge", "#Somerville", "#Stoneham", "#Winchester"];
 
-  applyColors(svg, AmherstFall, 'indianred')
+  applyColors(svg, AmherstFall1, 'indianred')
   applyColors(svg, AmherstFall2, 'lemonchiffon')
   applyColors(svg, AmherstSpring2, 'skyblue')
   applyColors(svg, Summer1, 'khaki')
