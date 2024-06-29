@@ -14,9 +14,9 @@ importers:
       '@astrojs/ts-plugin':
         specifier: ^1.8.0
         version: 1.8.0
-      '@fontsource/inter':
-        specifier: ^5.0.18
-        version: 5.0.18
+      '@iconify-json/simple-icons':
+        specifier: ^1.1.107
+        version: 1.1.107
       astro:
         specifier: ^4.11.3
         version: 4.11.3(@types/node@20.14.9)(typescript@5.5.2)
@@ -368,9 +368,6 @@ packages:
     resolution: {integrity: sha512-BsWiH1yFGjXXS2yvrf5LyuoSIIbPrGUWob917o+BTKuZ7qJdxX8aJLRxs1fS9n6r7vESrq1OUqb68dANcFXuQQ==}
     engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
 
-  '@fontsource/inter@5.0.18':
-    resolution: {integrity: sha512-YCsoYPTcs713sI7tLtxaPrIhXAXvEetGg5Ry02ivA8qUOb3fQHojbK/X9HLD5OOKvFUNR2Ynkwb1kR1hVKQHpw==}
-
   '@humanwhocodes/module-importer@1.0.1':
     resolution: {integrity: sha512-bxveV4V8v5Yb4ncFTT3rPSgZBOpCkjfK0y4oVVVJwIuDVBRMDXrPyXRL988i5ap9m9bnyEEjWfm5WkBmtffLfA==}
     engines: {node: '>=12.22'}
@@ -381,6 +378,9 @@ packages:
 
   '@iconify-json/devicon@1.1.44':
     resolution: {integrity: sha512-rC5sCrpYUYIllMbK1SsX3mYQ9fSWfga9Oyx0G+g4Jg2jdNJKfy5CJm0YtMAEypz0p+3HPTrl+R9uuvG0L8sSpg==}
+
+  '@iconify-json/simple-icons@1.1.107':
+    resolution: {integrity: sha512-IEIekNX+KsA/xOjTCxgdSDe6OJ1rOpio5CJ8GgCiyFZYSkPG1FPTFJIYGT95qh+HvnLAHqtKqZT53vDfyNl8fQ==}
 
   '@iconify/tools@3.0.7':
     resolution: {integrity: sha512-DxfhFLMnooS34dHelpGUnnYrxLZHs0czC1CgrBhAbuL8ddVzBb2VEQm8kh9qGh7A34qeXAB5iSHH3A72rAaFrg==}
@@ -2819,13 +2819,15 @@ snapshots:
 
   '@eslint/object-schema@2.1.4': {}
 
-  '@fontsource/inter@5.0.18': {}
-
   '@humanwhocodes/module-importer@1.0.1': {}
 
   '@humanwhocodes/retry@0.3.0': {}
 
   '@iconify-json/devicon@1.1.44':
+    dependencies:
+      '@iconify/types': 2.0.0
+
+  '@iconify-json/simple-icons@1.1.107':
     dependencies:
       '@iconify/types': 2.0.0
 
