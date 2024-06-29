@@ -18,7 +18,10 @@ import towns from "../assets/MATOWN.svg?raw";
   function applyColors(element: SVGSVGElement, towns: string[], color: string) {
     element
       .querySelectorAll(createIsSelector(towns))
-      .forEach((town) => town.setAttribute("style", `fill: ${color}`));
+      .forEach((town) => {
+        town.setAttribute("style", `fill: ${color}`)
+        town.insertAdjacentHTML('afterbegin', `<title> ${town.id} </title>`)
+      });
   }
 
   const AmherstFall = [
