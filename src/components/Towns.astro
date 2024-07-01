@@ -17,12 +17,10 @@ import towns from "../assets/MATOWN.svg?raw";
   const svg = document.querySelector("svg");
 
   function applyColors(element: SVGSVGElement, towns: string[], color: string) {
-    element
-      .querySelectorAll(createIsSelector(towns))
-      .forEach((town) => {
-        town.setAttribute("style", `fill: ${color}`)
-        town.insertAdjacentHTML('afterbegin', `<title> ${town.id} </title>`)
-      });
+    element.querySelectorAll(createIsSelector(towns)).forEach((town) => {
+      town.setAttribute("style", `fill: ${color}`);
+      town.insertAdjacentHTML("afterbegin", `<title> ${town.id} </title>`);
+    });
   }
 
   const AmherstFall1 = [
@@ -114,11 +112,21 @@ import towns from "../assets/MATOWN.svg?raw";
     "#Revere",
   ];
 
-  const Summer2 = ["#Cambridge", "#Somerville", "#Stoneham", "#Winchester"];
+  const Summer2 = [
+    "#Cambridge",
+    "#Somerville", 
+    "#Stoneham",
+    "#Winchester",
+    "#Belmont",
+    "#Arlington",
+    "#Brookline",
+    "#Watertown",
+    "#Waltham"
+  ];
 
-  applyColors(svg, AmherstFall1, 'indianred')
-  applyColors(svg, AmherstFall2, 'lemonchiffon')
-  applyColors(svg, AmherstSpring2, 'skyblue')
-  applyColors(svg, Summer1, 'khaki')
-  applyColors(svg, Summer2, 'brown')
+  applyColors(svg, AmherstFall1, "indianred");
+  applyColors(svg, AmherstFall2, "lemonchiffon");
+  applyColors(svg, AmherstSpring2, "skyblue");
+  applyColors(svg, Summer1, "khaki");
+  applyColors(svg, Summer2, "brown");
 </script>
