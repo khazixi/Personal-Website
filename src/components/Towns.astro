@@ -1,9 +1,13 @@
 ---
 // import { Fragment } from "astro/jsx-runtime"
 import towns from "../assets/MATOWN.svg?raw";
+import townImage from "../assets/MATOWN.svg";
+import { Image } from "astro:assets";
 ---
 
 <Fragment set:html={towns} />
+
+<!-- <Image src={townImage} alt="Towns"/> -->
 
 <script>
   // TODO: Add Vermont, Connecticut, New Hampshire maps for:
@@ -114,15 +118,17 @@ import towns from "../assets/MATOWN.svg?raw";
 
   const Summer2 = [
     "#Cambridge",
-    "#Somerville", 
+    "#Somerville",
     "#Stoneham",
     "#Winchester",
     "#Belmont",
     "#Arlington",
     "#Brookline",
     "#Watertown",
-    "#Waltham"
+    "#Waltham",
   ];
+
+  svg.classList.add('h-[200px]', 'md:h-[400px]', 'lg:h-full')
 
   applyColors(svg, AmherstFall1, "indianred");
   applyColors(svg, AmherstFall2, "lemonchiffon");
