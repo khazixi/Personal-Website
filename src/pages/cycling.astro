@@ -1,6 +1,9 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import MATowns from "../components/Towns.astro";
+import InteractiveTown from "../components/InteractiveTown.astro";
+
+import massachusetts from "../assets/MATOWN.svg?raw";
 // import "@fontsource/inter";
 ---
 
@@ -52,5 +55,6 @@ import MATowns from "../components/Towns.astro";
     </ul>
     <br />
   </article>
-    <MATowns />
+    <!-- <MATowns /> -->
+    <InteractiveTown state={massachusetts} statename={"Massachusetts"} />
 </BaseLayout>
