@@ -130,7 +130,9 @@ export const stateConfig = {
       "#Randolph",
       "#Holbrook",
       "#Milton",
-      "#Brockton"
+      "#Brockton",
+      "#Canton",
+      "#Braintree"
     ]
   },
   Vermont: {
