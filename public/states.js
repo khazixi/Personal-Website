@@ -132,7 +132,16 @@ export const stateConfig = {
       "#Milton",
       "#Brockton",
       "#Canton",
-      "#Braintree"
+      "#Braintree",
+      "#Lincoln",
+      "#Concord",
+      "#Acton",
+      "#Stow",
+      "#Hudson",
+      "#Berlin",
+      "#Northborough",
+      "#Shrewsbury",
+      "#Worcester",
     ]
   },
   Vermont: {
