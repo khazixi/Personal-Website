@@ -6,8 +6,8 @@ interface Props {
 const { state, statename = "" } = Astro.props;
 ---
 
-<div data-statename={statename}>
-  <Fragment set:html={state} />
+<div data-statename={statename} class="lg:w-[600px] lg:h-[300px] xl:w-[900px] xl:h[600px]">
+  <Fragment set:html={state} class:list={"mw"} />
 </div>
 
 <script define:vars={{ statename }} type="module">
@@ -25,7 +25,6 @@ const { state, statename = "" } = Astro.props;
     svg.querySelectorAll(createSelector(towns)).forEach((town) => {
       town.classList.add(season)
       town.insertAdjacentHTML("afterbegin", `<title> ${town.id} </title>`);
-      console.log(town.getAttribute('style'))
     });
 
   }

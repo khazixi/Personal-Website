@@ -142,6 +142,16 @@ export const stateConfig = {
       "#Northborough",
       "#Shrewsbury",
       "#Worcester",
+      "#Billerica",
+      "#Chelmsford",
+      "#Westford",
+      "#Groton",
+      "#Ayer",
+      "#Harvard",
+      "#Shirley",
+      "#Lunenburg",
+      "#Leominster",
+      "#Fitchburg"
     ]
   },
   Vermont: {
