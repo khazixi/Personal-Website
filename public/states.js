@@ -152,7 +152,12 @@ export const stateConfig = {
       "#Lunenburg",
       "#Leominster",
       "#Fitchburg"
-    ]
+    ],
+    Fall2024: [
+      '#Williamsbury',
+      '#Conway',
+      '#Ashfield'
+    ],
   },
   Vermont: {
     Spring2024: ['#Vernon', '#Brattleboro'],
