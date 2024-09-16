@@ -156,7 +156,13 @@ export const stateConfig = {
     Fall2024: [
       '#Williamsbury',
       '#Conway',
-      '#Ashfield'
+      '#Ashfield',
+      '#Brookfield',
+      '#East_Brookfield',
+      '#West_Brookfield',
+      '#Spencer',
+      '#Leicester',
+      '#Ware',
     ],
   },
   Vermont: {
