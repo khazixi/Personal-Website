@@ -163,6 +163,9 @@ export const stateConfig = {
       '#Spencer',
       '#Leicester',
       '#Ware',
+      '#Orange',
+      '#New_Salem',
+      '#Wendell'
     ],
   },
   Vermont: {
