@@ -154,7 +154,7 @@ export const stateConfig = {
       "#Fitchburg"
     ],
     Fall2024: [
-      '#Williamsbury',
+      '#Williamsburg',
       '#Conway',
       '#Ashfield',
       '#Brookfield',
@@ -165,7 +165,13 @@ export const stateConfig = {
       '#Ware',
       '#Orange',
       '#New_Salem',
-      '#Wendell'
+      '#Wendell',
+      "#Shelburne",
+      "#Buckland",
+      '#Palmer',
+      '#Hampden',
+      '#Wilbraham',
+      '#Monson',
     ],
   },
   Vermont: {
