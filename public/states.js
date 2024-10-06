@@ -172,6 +172,8 @@ export const stateConfig = {
       '#Hampden',
       '#Wilbraham',
       '#Monson',
+      '#Leyden',
+      '#Colrain'
     ],
   },
   Vermont: {
