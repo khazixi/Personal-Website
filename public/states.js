@@ -173,7 +173,10 @@ export const stateConfig = {
       '#Wilbraham',
       '#Monson',
       '#Leyden',
-      '#Colrain'
+      '#Colrain',
+      '#Petersham',
+      '#Hardwick',
+      '#New_Braintree'
     ],
   },
   Vermont: {
