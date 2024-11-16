@@ -176,7 +176,9 @@ export const stateConfig = {
       '#Colrain',
       '#Petersham',
       '#Hardwick',
-      '#New_Braintree'
+      '#New_Braintree',
+      "#Chesterfield",
+      "#Goshen"
     ],
   },
   Vermont: {
