@@ -5,7 +5,7 @@ const site = lume({
   src: './src'
 });
 
-site.copy('/_includes/styles')
+site.copy('_includes/styles')
 site.use(lightningCss())
 
 export default site;
